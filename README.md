@@ -1,11 +1,13 @@
 # Slideshow
+
 This project was generated using [Nx](https://nx.dev).
 
-Why this choice?
+Why choosing `nx` over other boilderplates ?
 
-- Clean of any React libraries
-- Typescript support
-- E2E support with cypress.io
+- Curiosity
+- It doesnt include any React boilerplate
+- It got a decent Typescript support
+- It supports E2E out of the box with cypress.io
 
 ### What is in this project?
 
@@ -13,6 +15,10 @@ Why this choice?
 (tested with cypress e2e)
 
 - A Custom Feature
+
+### What it doesn't have
+
+- A `master` branch
 
 ### Reponsivness
 
@@ -52,9 +58,9 @@ body, html {
 
 TLTR;
 
-You can watch the cypress VIDEO here
+You can watch the cypress VIDEO here (Download)
 
-[Link to the Cypress.io e2e Video](cypress/videos/app.spec.ts.mp4)
+[Link to the Cypress.io e2e Video](raw/cypress/videos/app.spec.ts.mp4)
 
 
 **Want to run it locally?**
@@ -65,6 +71,10 @@ git clone
 npm install -g @nrwl/cli
 npm install 
 
+# Just play with it: 
+npm run start
+
+# Run Cypress e2e
 nx run slideshow-e2e:e2e --watch
 
 ```
@@ -72,6 +82,4 @@ nx run slideshow-e2e:e2e --watch
 
 ### What is missing?
 
-The search box at the top, and the unit testing that goes with it.
-
-
+More e2e testing.
