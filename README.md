@@ -1,11 +1,11 @@
 # Slideshow
 
-This project was generated using [Nx](https://nx.dev).
+Generated using [Nx](https://nx.dev).
 
-Why choosing `nx` over other boilderplates ?
+Why choosing `nx` over other boilerplate ?
 
 - Curiosity
-- It doesnt include any React boilerplate
+- It doesn't include any React boilerplate
 - It got a decent Typescript support
 - It supports E2E out of the box with cypress.io
 
@@ -20,14 +20,13 @@ Why choosing `nx` over other boilderplates ?
 
 - A `master` branch
 
-### Reponsivness
+### Responsiveness
 
-It has 2 responsivness capabilities
+It has 2 responsiveness capabilities
 
 - Traditional breakpoints (mobile, tablet, desktop, large desktops)
-- **Antoine's special** - Fully vectorial scalable UX with `REM` and `VW`.
-*If you present your work on a giant cinema screen, everything will scale up nicelly.
-The only draw back is that it disables the browser's zoom.*
+- **Antoine's special** - Fully vector scalable UX with `REM` and `VW`.
+*If you present your work on a giant cinema screen, everything will scale up nicely.*
    
 ```scss
 
@@ -58,9 +57,9 @@ body, html {
 
 TLTR;
 
-You can watch the cypress VIDEO here (Download)
+You can watch the cypress VIDEO here (Click Download)
 
-[Link to the Cypress.io e2e Video](raw/cypress/videos/app.spec.ts.mp4)
+[Link to the Cypress.io e2e Video](cypress/videos/app.spec.ts.mp4)
 
 
 **Want to run it locally?**
