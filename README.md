@@ -1,90 +1,77 @@
 # Slideshow
-
 This project was generated using [Nx](https://nx.dev).
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+Why this choice?
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+- Clean of any React libraries
+- Typescript support
+- E2E support with cypress.io
 
-## Adding capabilities to your workspace
+### What is in this project?
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+- A custom Slideshow
+(tested with cypress e2e)
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+- A Custom Feature
 
-Below are our core plugins:
+### Reponsivness
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
+It has 2 responsivness capabilities
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+- Traditional breakpoints (mobile, tablet, desktop, large desktops)
+- **Antoine's special** - Fully vectorial scalable UX with `REM` and `VW`.
+*If you present your work on a giant cinema screen, everything will scale up nicelly.
+The only draw back is that it disables the browser's zoom.*
+   
+```scss
 
-## Generate an application
+body, html {
+  font-size: 4vw;
+}
+@media  (orientation: landscape){
+  body, html {font-size: 2vw;}
+}
+@media (min-width: 576px) and (orientation: portrait){
+  body, html {font-size: 3.5vw}
+}
+@media (min-width: 768px) {
+  body, html {font-size: 2vw}
+}
+@media (min-width: 992px) {
+  body, html {font-size: 1vw}
+}
+@media (min-width: 1200px) {
+  body, html {font-size: 0.8vw}
+}
+....
 
-Run `nx g @nrwl/react:app my-app` to generate an application.
+```
 
-> You can use any of the plugins above to generate applications as well.
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+### How to RUN
 
-## Generate a library
+TLTR;
 
-Run `nx g @nrwl/react:lib my-lib` to generate a library.
+You can watch the cypress VIDEO here
 
-> You can also use any of the plugins above to generate libraries as well.
+[Link to the Cypress.io e2e Video](cypress/videos/app.spec.ts.mp4)
 
-Libraries are sharable across libraries and applications. They can be imported from `@slideshow/mylib`.
 
-## Development server
+**Want to run it locally?**
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+```bash
+git clone 
+# cd in the new folder
+npm install -g @nrwl/cli
+npm install 
 
-## Code scaffolding
+nx run slideshow-e2e:e2e --watch
 
-Run `nx g @nrwl/react:component my-component --project=my-app` to generate a new component.
+```
 
-## Build
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### What is missing?
 
-## Running unit tests
+The search box at the top, and the unit testing that goes with it.
 
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
 
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
-
-## ☁ Nx Cloud
-
-### Computation Memoization in the Cloud
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
