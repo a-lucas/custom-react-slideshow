@@ -11,50 +11,14 @@ export interface IImage {
   height: string;
 }
 
-export interface ImageProps {
-  src: string
-  srcset: string
-  sizes: string
-  alt: string
-  width: string;
-  height: string;
-
-  placeholderSrc: string;
-
-  basic: boolean,
-  contain: boolean,
-  position: {
-    type: string;
-    default: '50% 50%'
-  },
-
-  transition: {
-    type: string;
-    default: 'fade'
-  },
-
-  imgClass: string[],
-
-  nativeContextMenu: boolean,
-
-  noDefaultSpinner: boolean,
-  spinnerColor: string;
-  spinnerSize: string
-}
-
-
 export const AImage: React.FunctionComponent<IImage> = (image) => {
-
   const [hasError, setError] = useState<boolean>(false);
   const [isLoading, setLoading] = useState<boolean>(false);
-
-
   const [url, setUrl] = useState<string>('');
   const [style, setStyle] = useState({
     width: image.width || 350 ,
     height: image.height || 150
   });
-
   const error = (err) => {
     console.error(err);
     setError(true);
@@ -116,5 +80,4 @@ export const AImage: React.FunctionComponent<IImage> = (image) => {
     <div className={'q-img overflow-hidden'} style={style} >
       {getImage()}
     </div>);
-
 };

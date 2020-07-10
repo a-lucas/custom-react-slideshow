@@ -20,4 +20,4 @@ export const Featured: React.FC<FeaturedProps> = ({images, width}) => {
     </div>
   )
 
-}
+};

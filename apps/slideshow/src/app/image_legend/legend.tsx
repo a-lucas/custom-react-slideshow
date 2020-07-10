@@ -7,7 +7,6 @@ export interface Legend {
 }
 
 export const ImageLegend: React.FC<Legend> = ({title, location}) => {
-
   return (
     <div className={'image-legend'}>
       <p className={'title'}>{title}</p>

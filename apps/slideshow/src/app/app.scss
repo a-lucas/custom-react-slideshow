@@ -1,6 +1,4 @@
-
-
-
+@import "./../variables";
 
 .flex-container {
   display: flex;
@@ -10,7 +8,7 @@
   align-content: flex-start;
   align-items: center;
 }
-$primary: #58728A;
+
 
 body, html {
   font-size: 4vw;
