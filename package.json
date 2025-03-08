@@ -27,7 +27,7 @@
   },
   "private": true,
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^1.8.2",
     "document-register-element": "1.13.1",
     "parse-css-dimension": "^1.1.0",
     "react": "16.13.1",
